@@ -13,7 +13,8 @@ greet_name(PyObject *self, PyObject *args)
         return NULL;
     }
 
-    print(name, name_two);
+    Print save(name, name_two);
+    save.print();
 
     Py_RETURN_NONE;
 }

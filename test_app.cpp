@@ -1,8 +1,17 @@
 #include <iostream>
+#include "test_app.h"
 
-void print(const char *name, const char *name_two) {
 
-    printf("Hello %s!\n", name);
-    printf("Hello %s!\n", name_two);
+Print::Print(const char *name, const char *name_two) :
+    _name { name },
+    _name_two { name_two } {
+
+}
+Print::~Print() {}
+
+void Print::print() {
+
+    printf("Hello %s!\n", _name);
+    printf("Hello %s!\n", _name_two);
 
 }
