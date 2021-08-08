@@ -9,7 +9,7 @@ setup(
     ext_modules=[
         Extension(
             'licentra',
-            sources=['licentra.cpp'],
+            sources=['licentra.cpp', 'test_app.cpp'],
             py_limited_api=True)
     ],
 )

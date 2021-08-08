@@ -1,12 +1,6 @@
 #define PY_SSIZE_T_CLEAN
 #include <Python.h>
-
-void print(const char *name, const char *name_two) {
-
-    printf("Hello %s!\n", name);
-    printf("Hello %s!\n", name_two);
-
-}
+#include "test_app.h"
 
 static PyObject *
 greet_name(PyObject *self, PyObject *args)
