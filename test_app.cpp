@@ -2,10 +2,10 @@
 #include "test_app.h"
 
 
-Print::Print(const char *name, const char *name_two) :
-    _name { name },
-    _name_two { name_two },
-    _innerState {} {
+Print::Print(const char *name, const char *name_two) {
+    _name = name;
+    _name_two = name_two;
+    _innerState = 0;
 
 }
 Print::~Print() {}
