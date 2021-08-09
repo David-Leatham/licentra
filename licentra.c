@@ -1,6 +1,6 @@
 #define PY_SSIZE_T_CLEAN
 #include <Python.h>
-#include "test_app.h"
+#include "wrapper.h"
 
 static PyObject *
 greet_name(PyObject *self, PyObject *args)
@@ -13,8 +13,11 @@ greet_name(PyObject *self, PyObject *args)
         return NULL;
     }
 
-    Print save(name, name_two);
-    save.print();
+    struct Print* c = newPrint(name, name_two);
+    // Print_innerSet(c, 3);
+    // printf("%i\n", Print_innerGet(c));
+    Print_print(c);
+    deletePrint(c);
 
     Py_RETURN_NONE;
 }
