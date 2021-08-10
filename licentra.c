@@ -1,6 +1,6 @@
 #define PY_SSIZE_T_CLEAN
 #include <Python.h>
-#include "Wrapper.h"
+#include "wrapper.h"
 
 static PyObject *
 greet_name(PyObject *self, PyObject *args)
